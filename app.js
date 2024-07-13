@@ -15,7 +15,9 @@ mongoose.connect(
 ).then(()=>{
     console.log("Connected to database")
 }).then(()=>{
-    app.listen(PORT)
+    app.listen(PORT,()=>{
+        console.log("Connected to port",port)
+    })
 }).catch((err)=>{
     console.log(err)
 })
